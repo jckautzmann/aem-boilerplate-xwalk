@@ -44,6 +44,14 @@ async function overrideEditButton(sk) {
   const oldEditBtn1 = await getButton(sk, '.edit.plugin');
   oldEditBtn1.remove();
   sk.addEventListener('custom:aemedit', openAemEditor);
+  const reloadBtn = await getButton(sk, '.reload.plugin');
+  reloadBtn.remove();
+  const publishBtn = await getButton(sk, '.publish.plugin');
+  publishBtn.remove();
+  const deleteBtn = await getButton(sk, '.delete.plugin');
+  deleteBtn.remove();
+  const unpublishBtn = await getButton(sk, '.unpublish.plugin');
+  unpublishBtn.remove();
 }
 
 // eslint-disable-next-line import/prefer-default-export
